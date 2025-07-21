@@ -42,6 +42,7 @@ import com.google.mlkit.vision.face.FaceDetectorOptions;
 import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
+import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void runTextRecognition() {
         InputImage image = InputImage.fromBitmap(mSelectedImage, 0);
-        TextRecognizer recognizer = TextRecognition.getClient();
+        TextRecognizer recognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
         mTextButton.setEnabled(false);
         recognizer.process(image)
                 .addOnSuccessListener(

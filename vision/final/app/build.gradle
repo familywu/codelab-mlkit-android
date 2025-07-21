@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
     namespace "com.google.codelab.mlkit"
     defaultConfig {
         applicationId "com.google.codelab.mlkit"
-        minSdkVersion 19
-        targetSdkVersion 28
+        minSdkVersion 21
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -36,5 +36,15 @@ dependencies {
     implementation 'com.google.mlkit:face-detection:16.0.0'
 
     // Text features
-    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.0.0'
+    implementation 'com.google.mlkit:text-recognition:16.0.1'
+    implementation 'com.google.mlkit:text-recognition-chinese:16.0.1'
+    implementation 'com.google.mlkit:text-recognition-devanagari:16.0.1'
+    implementation 'com.google.mlkit:text-recognition-japanese:16.0.1'
+    implementation 'com.google.mlkit:text-recognition-korean:16.0.1'
+    // 如需 Google Play Services 依赖，请取消注释下方内容
+    // implementation 'com.google.android.gms:play-services-mlkit-text-recognition:19.0.1'
+    // implementation 'com.google.android.gms:play-services-mlkit-text-recognition-chinese:16.0.1'
+    // implementation 'com.google.android.gms:play-services-mlkit-text-recognition-devanagari:16.0.1'
+    // implementation 'com.google.android.gms:play-services-mlkit-text-recognition-japanese:16.0.1'
+    // implementation 'com.google.android.gms:play-services-mlkit-text-recognition-korean:16.0.1'
 }
